@@ -175,7 +175,7 @@
       <text class="txt-mono" font-size="11" font-weight="700" fill="#00f3ff" x="125" y="208" text-anchor="middle" letter-spacing="2">@Kaiser131</text>
       <!-- Title Badge -->
       <rect x="30" y="217" width="190" height="20" rx="4" fill="#022c22" stroke="#00ff9d" stroke-width="1" opacity="0.85"/>
-      <text class="txt-mono" font-size="9" font-weight="800" fill="#00ff9d" x="125" y="231" text-anchor="middle" letter-spacing="1.5">PRINCIPAL FULL-STACK ARCHITECT</text>
+      <text class="txt-mono" font-size="9" font-weight="800" fill="#00ff9d" x="125" y="231" text-anchor="middle" letter-spacing="1.5">FULL-STACK SOFTWARE ENGINEER</text>
 
       <!-- Divider Ribbon Line Overlay -->
       <line x1="25" y1="250" x2="225" y2="250" stroke="#1e293b" stroke-width="1.5"/>
@@ -184,7 +184,7 @@
       <g transform="translate(26, 262)" class="txt-sans">
         <!-- Division -->
         <text font-size="8" font-weight="700" fill="#64748b" letter-spacing="1">DIVISION</text>
-        <text class="txt-mono" font-size="10.5" font-weight="700" fill="#f8fafc" y="14">CORE 3D &amp; WEB</text>
+        <text class="txt-mono" font-size="10.5" font-weight="700" fill="#f8fafc" y="14">FULL-STACK &amp; DEVOPS</text>
 
         <!-- Access Status -->
         <text font-size="8" font-weight="700" fill="#64748b" letter-spacing="1" x="118">SYS_ACCESS</text>
@@ -194,7 +194,7 @@
       <g transform="translate(26, 302)" class="txt-sans">
         <!-- Specialization -->
         <text font-size="8" font-weight="700" fill="#64748b" letter-spacing="1">SPECIALTY</text>
-        <text class="txt-mono" font-size="10.5" font-weight="700" fill="#00f3ff" y="14">WEBGL / DISTRIBUTED</text>
+        <text class="txt-mono" font-size="10.5" font-weight="700" fill="#00f3ff" y="14">NESTJS / NEXT.JS / ORM</text>
 
         <!-- Node ID -->
         <text font-size="8" font-weight="700" fill="#64748b" letter-spacing="1" x="118">SECURITY HASH</text>
