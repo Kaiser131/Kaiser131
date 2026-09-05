@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- ================= 1. CINEMATIC HEADER ================= -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020409,25:050f24,50:0a2540,75:0284c7,100:00ff9d&height=280&section=header&text=Kaiser&fontSize=64&fontColor=ffffff&fontAlignY=38&fontAlign=50&desc=Full-Stack%20Software%20Engineer%20%7C%20NestJS%20%7C%20Next.js%20%7C%20DevOps&descAlignY=58&descSize=16&descFontColor=00f3ff&stroke=00f3ff&strokeWidth=1" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020409,25:050f24,50:0a2540,75:0284c7,100:00ff9d&height=280&section=header&text=Kaiser&fontSize=64&fontColor=ffffff&fontAlignY=38&fontAlign=50&desc=Full-Stack%20Web%20Developer%20%7C%20NestJS%20%7C%20Next.js%20%7C%20DevOps&descAlignY=58&descSize=16&descFontColor=00f3ff&stroke=00f3ff&strokeWidth=1" />
 
 <br/>
 
@@ -274,6 +274,10 @@
 <br/>
 
 <p align="center">
+  <a href="https://www.linkedin.com/in/shaif-ahamed-sojib-a99a06300/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect%20Professionally-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=020617" />
+  </a>
+  &nbsp;
   <a href="https://github.com/Kaiser131" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Follow%20Engineering-ffffff?style=for-the-badge&logo=github&logoColor=black&labelColor=020617" />
   </a>
@@ -292,8 +296,10 @@
 <table border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td align="center" valign="middle" width="180">
-      <b>Scan for GitHub Profile</b><br/><br/>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https://github.com/Kaiser131&color=00ff9d&bgcolor=020617&margin=8" alt="Profile QR Code" width="140" style="border-radius: 8px;" />
+      <b>Scan for LinkedIn Profile</b><br/><br/>
+      <a href="https://www.linkedin.com/in/shaif-ahamed-sojib-a99a06300/" target="_blank">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https://www.linkedin.com/in/shaif-ahamed-sojib-a99a06300/&color=00ff9d&bgcolor=020617&margin=8" alt="LinkedIn Profile QR Code" width="140" style="border-radius: 8px;" />
+      </a>
     </td>
     <td align="center" valign="middle">
       <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=15&duration=3500&pause=1200&color=00F3FF&background=00000000&center=true&vCenter=true&multiline=false&repeat=true&width=520&height=50&lines=Full-Stack+Engineer+focused+on+resilient+systems.;Available+for+high-impact+roles+%26+consulting.;Let%27s+build+production+software+that+lasts." alt="Footer Typing" />
