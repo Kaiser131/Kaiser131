@@ -56,7 +56,7 @@
 
 ## ⚡ Engineering Ethos & Core Specialization
 
-> *"Full-Stack Software Engineer with proven experience architecting, building, and deploying production web applications across frontend, backend, databases, web scraping, and cloud infrastructure."*
+> *"Full-Stack web developer with proven experience architecting, building, and deploying production web applications across frontend, backend, databases, web scraping, and cloud infrastructure."*
 
 </div>
 
