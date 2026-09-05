@@ -1,195 +1,243 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 420" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620" width="100%" height="100%">
   <defs>
     <!-- Cyberpunk Gradients -->
-    <linearGradient id="card-body" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080e1e" stop-opacity="0.95"/>
-      <stop offset="50%" stop-color="#040711" stop-opacity="0.98"/>
-      <stop offset="100%" stop-color="#02040a" stop-opacity="0.98"/>
+    <linearGradient id="stats-card-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091326" stop-opacity="0.96"/>
+      <stop offset="50%" stop-color="#050a17" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#02040a" stop-opacity="0.99"/>
     </linearGradient>
 
-    <linearGradient id="glass-edge" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.5"/>
-      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.2"/>
-      <stop offset="70%" stop-color="#10b981" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0.1"/>
+    <linearGradient id="stats-glass-edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.75"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#00ff9d" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0.15"/>
     </linearGradient>
 
-    <linearGradient id="neon-cyan-green" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f3ff"/>
-      <stop offset="100%" stop-color="#00ff9d"/>
-    </linearGradient>
-
-    <linearGradient id="neon-emerald" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10b981"/>
-      <stop offset="100%" stop-color="#00ff9d"/>
-    </linearGradient>
-
-    <linearGradient id="progress-bar-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="progress-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0284c7"/>
       <stop offset="50%" stop-color="#00f3ff"/>
       <stop offset="100%" stop-color="#00ff9d"/>
     </linearGradient>
 
-    <!-- Filters for Glow Effects -->
-    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+    <linearGradient id="progress-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#00ff9d"/>
+    </linearGradient>
+
+    <linearGradient id="progress-grad-3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#00ff9d"/>
+    </linearGradient>
+
+    <linearGradient id="radar-sweep-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#00f3ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Visual Glow Filters -->
+    <filter id="stats-subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="emerald-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
+    <filter id="stats-emerald-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Typography Styles -->
+    <!-- Typography & Animations -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&amp;family=Inter:wght@400;600;700;800;900&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=Inter:wght@400;600;700;800;900&amp;display=swap');
       .txt-sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
       .txt-mono { font-family: 'JetBrains Mono', monospace; }
-
-      @keyframes row-fade {
-        0% { opacity: 0; transform: translateX(-10px); }
-        100% { opacity: 1; transform: translateX(0); }
-      }
-      .stat-row-1 { animation: row-fade 0.5s ease-out forwards; animation-delay: 0.15s; opacity: 0; }
-      .stat-row-2 { animation: row-fade 0.5s ease-out forwards; animation-delay: 0.3s; opacity: 0; }
-      .stat-row-3 { animation: row-fade 0.5s ease-out forwards; animation-delay: 0.45s; opacity: 0; }
-      .stat-row-4 { animation: row-fade 0.5s ease-out forwards; animation-delay: 0.6s; opacity: 0; }
-
-      @keyframes fill-ring {
-        0% { stroke-dashoffset: 300; }
-        100% { stroke-dashoffset: 45; }
-      }
-      .rank-ring { 
-        stroke-dasharray: 300; 
-        stroke-dashoffset: 300; 
-        animation: fill-ring 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; 
-        animation-delay: 0.4s; 
-      }
 
       @keyframes radar-sweep {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
-      .radar-line {
-        transform-origin: 450px 210px;
-        animation: radar-sweep 8s linear infinite;
+      .radar-sweep-beam {
+        transform-origin: 475px 285px;
+        animation: radar-sweep 7s linear infinite;
       }
 
-      @keyframes pulse-dot {
-        0%, 100% { opacity: 0.4; }
-        50% { opacity: 1; }
+      @keyframes beacon-pulse {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.3); }
       }
-      .pulse-beacon {
-        animation: pulse-dot 1.8s ease-in-out infinite;
+      .beacon-dot {
+        transform-origin: 35px 36px;
+        animation: beacon-pulse 2s ease-in-out infinite;
       }
+
+      @keyframes blip-blink {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 0.95; }
+      }
+      .radar-blip-1 { animation: blip-blink 2.5s ease-in-out infinite; }
+      .radar-blip-2 { animation: blip-blink 3.2s ease-in-out infinite 1s; }
     </style>
   </defs>
 
-  <!-- Base Plate Frame Layer -->
-  <rect width="580" height="420" rx="22" fill="url(#card-body)" stroke="url(#glass-edge)" stroke-width="2" filter="url(#subtle-glow)"/>
+  <!-- Base Plate Card Frame -->
+  <rect width="620" height="620" rx="24" fill="url(#stats-card-body)" stroke="url(#stats-glass-edge)" stroke-width="2.2" filter="url(#stats-subtle-glow)"/>
 
-  <!-- Subtle Internal Geometric Grid Lines -->
+  <!-- Subtle Geometric Internal Grid -->
   <g opacity="0.04" stroke="#00f3ff" stroke-width="1">
-    <line x1="35" y1="0" x2="35" y2="420"/>
-    <line x1="330" y1="0" x2="330" y2="420"/>
-    <line x1="0" y1="52" x2="580" y2="52"/>
-    <line x1="0" y1="365" x2="580" y2="365"/>
-    <circle cx="35" cy="52" r="3" fill="#00f3ff"/>
-    <circle cx="330" cy="52" r="3" fill="#00ff9d"/>
+    <line x1="35" y1="0" x2="35" y2="620"/>
+    <line x1="350" y1="0" x2="350" y2="620"/>
+    <line x1="0" y1="56" x2="620" y2="56"/>
+    <line x1="0" y1="560" x2="620" y2="560"/>
+  </g>
+
+  <!-- Corner Tech Reticle HUD Brackets -->
+  <g stroke="#00f3ff" stroke-width="1.6" fill="none" opacity="0.75">
+    <path d="M 18,34 L 18,18 L 34,18"/>
+    <path d="M 602,34 L 602,18 L 586,18"/>
+    <path d="M 18,586 L 18,602 L 34,602"/>
+    <path d="M 602,586 L 602,602 L 586,602"/>
   </g>
 
   <!-- ================= CARD HEADER ================= -->
-  <g transform="translate(35, 34)">
-    <circle class="pulse-beacon" cx="0" cy="0" r="5" fill="#00ff9d" filter="url(#emerald-glow)"/>
-    <text class="txt-sans" font-size="13" font-weight="800" fill="#94a3b8" x="16" y="4" letter-spacing="1.5">PRODUCTION TELEMETRY</text>
-    <text class="txt-mono" font-size="10" font-weight="700" fill="#00ff9d" x="225" y="4" letter-spacing="1">[ SLA: 100% ACTIVE ]</text>
+  <g transform="translate(35, 36)">
+    <circle class="beacon-dot" cx="0" cy="0" r="5.5" fill="#00ff9d" filter="url(#stats-emerald-glow)"/>
+    <text class="txt-sans" font-size="13" font-weight="800" fill="#f8fafc" x="16" y="4" letter-spacing="1.5">PRODUCTION TELEMETRY HUD</text>
+    <rect x="365" y="-12" width="185" height="22" rx="5" fill="#022c22" stroke="#00ff9d" stroke-width="1"/>
+    <text class="txt-mono" font-size="9.5" font-weight="700" fill="#00ff9d" x="457" y="3" text-anchor="middle" letter-spacing="1">SLA: 100% OPERATIONAL</text>
   </g>
+
+  <line x1="35" y1="56" x2="585" y2="56" stroke="url(#stats-glass-edge)" stroke-width="1.2" opacity="0.6"/>
 
   <!-- ================= LEFT COLUMN: PRODUCTION METRIC ROWS ================= -->
 
-  <!-- Row 1: Total Commits -->
-  <g class="stat-row-1" transform="translate(35, 72)">
-    <text class="txt-sans" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.8">GLOBAL REPOSITORY COMMITS</text>
-    <text class="txt-mono" font-size="22" font-weight="800" fill="#ffffff" y="28">2,840+</text>
-    <text class="txt-sans" font-size="10.5" font-weight="600" fill="#00f3ff" x="110" y="26">Across 95 Repos</text>
+  <!-- Row 1: Global Commits -->
+  <g transform="translate(35, 82)">
+    <text class="txt-sans" font-size="10.5" font-weight="700" fill="#64748b" letter-spacing="1">GLOBAL COMMITS &amp; VELOCITY</text>
+    <text class="txt-mono" font-size="24" font-weight="800" fill="#ffffff" y="30">2,840+</text>
+    <text class="txt-sans" font-size="11" font-weight="600" fill="#00f3ff" x="118" y="27">Across 95+ Repos</text>
     <!-- Progress Bar -->
-    <rect y="38" width="265" height="4" rx="2" fill="#0f172a"/>
-    <rect y="38" width="245" height="4" rx="2" fill="url(#progress-bar-grad)"/>
-    <line x1="0" y1="52" x2="275" y2="52" stroke="#1e293b" stroke-width="1"/>
+    <rect y="42" width="280" height="5" rx="2.5" fill="#0f172a"/>
+    <rect y="42" width="260" height="5" rx="2.5" fill="url(#progress-grad-1)"/>
+    <line x1="0" y1="58" x2="295" y2="58" stroke="#1e293b" stroke-width="1"/>
   </g>
 
   <!-- Row 2: Architecture & Live Deployments -->
-  <g class="stat-row-2" transform="translate(35, 144)">
-    <text class="txt-sans" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.8">STACK ARCHITECTURE &amp; DEPLOYMENT</text>
-    <text class="txt-mono" font-size="20" font-weight="800" fill="#00f3ff" y="27" filter="url(#subtle-glow)">Distributed &amp; 3D</text>
-    <text class="txt-sans" font-size="10.5" font-weight="600" fill="#94a3b8" x="180" y="25">Microservices + WebGL</text>
+  <g transform="translate(35, 166)">
+    <text class="txt-sans" font-size="10.5" font-weight="700" fill="#64748b" letter-spacing="1">STACK ARCHITECTURE &amp; DEPLOYMENT</text>
+    <text class="txt-mono" font-size="21" font-weight="800" fill="#00f3ff" y="29" filter="url(#stats-subtle-glow)">Full-Stack &amp; Cloud</text>
+    <text class="txt-sans" font-size="11" font-weight="600" fill="#94a3b8" x="180" y="27">NestJS • Next • Docker</text>
     <!-- Progress Bar -->
-    <rect y="38" width="265" height="4" rx="2" fill="#0f172a"/>
-    <rect y="38" width="255" height="4" rx="2" fill="url(#progress-bar-grad)"/>
-    <line x1="0" y1="52" x2="275" y2="52" stroke="#1e293b" stroke-width="1"/>
+    <rect y="42" width="280" height="5" rx="2.5" fill="#0f172a"/>
+    <rect y="42" width="270" height="5" rx="2.5" fill="url(#progress-grad-1)"/>
+    <line x1="0" y1="58" x2="295" y2="58" stroke="#1e293b" stroke-width="1"/>
   </g>
 
-  <!-- Row 3: SLA & Reliability -->
-  <g class="stat-row-3" transform="translate(35, 216)">
-    <text class="txt-sans" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.8">SYSTEM AVAILABILITY &amp; PERFORMANCE</text>
-    <text class="txt-mono" font-size="20" font-weight="800" fill="#00ff9d" y="27" filter="url(#emerald-glow)">99.99% SLA</text>
-    <text class="txt-sans" font-size="10.5" font-weight="600" fill="#94a3b8" x="145" y="25">&lt; 35ms Edge Latency</text>
+  <!-- Row 3: SLA & Availability -->
+  <g transform="translate(35, 250)">
+    <text class="txt-sans" font-size="10.5" font-weight="700" fill="#64748b" letter-spacing="1">SYSTEM AVAILABILITY &amp; PERFORMANCE</text>
+    <text class="txt-mono" font-size="21" font-weight="800" fill="#00ff9d" y="29" filter="url(#stats-emerald-glow)">99.99% SLA</text>
+    <text class="txt-sans" font-size="11" font-weight="600" fill="#94a3b8" x="145" y="27">&lt; 35ms Edge Latency</text>
     <!-- Progress Bar -->
-    <rect y="38" width="265" height="4" rx="2" fill="#0f172a"/>
-    <rect y="38" width="262" height="4" rx="2" fill="url(#neon-emerald)"/>
-    <line x1="0" y1="52" x2="275" y2="52" stroke="#1e293b" stroke-width="1"/>
+    <rect y="42" width="280" height="5" rx="2.5" fill="#0f172a"/>
+    <rect y="42" width="278" height="5" rx="2.5" fill="url(#progress-grad-2)"/>
+    <line x1="0" y1="58" x2="295" y2="58" stroke="#1e293b" stroke-width="1"/>
   </g>
 
-  <!-- Row 4: Code Review & Delivery Velocity -->
-  <g class="stat-row-4" transform="translate(35, 288)">
-    <text class="txt-sans" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.8">DEVELOPMENT &amp; PR VELOCITY</text>
-    <text class="txt-mono" font-size="20" font-weight="800" fill="#38bdf8" y="27">Top 1% Global</text>
-    <text class="txt-sans" font-size="10.5" font-weight="600" fill="#64748b" x="165" y="25">Clean CI/CD Flow</text>
+  <!-- Row 4: DevOps Automation -->
+  <g transform="translate(35, 334)">
+    <text class="txt-sans" font-size="10.5" font-weight="700" fill="#64748b" letter-spacing="1">WORKFLOW &amp; DEVOPS AUTOMATION</text>
+    <text class="txt-mono" font-size="21" font-weight="800" fill="#38bdf8" y="29">CI/CD Automated</text>
+    <text class="txt-sans" font-size="11" font-weight="600" fill="#64748b" x="168" y="27">VPS • Web Scraping</text>
     <!-- Progress Bar -->
-    <rect y="38" width="265" height="4" rx="2" fill="#0f172a"/>
-    <rect y="38" width="250" height="4" rx="2" fill="url(#progress-bar-grad)"/>
+    <rect y="42" width="280" height="5" rx="2.5" fill="#0f172a"/>
+    <rect y="42" width="265" height="5" rx="2.5" fill="url(#progress-grad-1)"/>
+    <line x1="0" y1="58" x2="295" y2="58" stroke="#1e293b" stroke-width="1"/>
+  </g>
+
+  <!-- Row 5: Codebase Integrity -->
+  <g transform="translate(35, 418)">
+    <text class="txt-sans" font-size="10.5" font-weight="700" fill="#64748b" letter-spacing="1">CODE QUALITY &amp; REPOSITORIES</text>
+    <text class="txt-mono" font-size="21" font-weight="800" fill="#a855f7" y="29">Top 0.5% Global</text>
+    <text class="txt-sans" font-size="11" font-weight="600" fill="#94a3b8" x="160" y="27">Modular Architecture</text>
+    <!-- Progress Bar -->
+    <rect y="42" width="280" height="5" rx="2.5" fill="#0f172a"/>
+    <rect y="42" width="272" height="5" rx="2.5" fill="url(#progress-grad-3)"/>
+    <line x1="0" y1="58" x2="295" y2="58" stroke="#1e293b" stroke-width="1"/>
+  </g>
+
+  <!-- Row 6: Active Status Pill -->
+  <g transform="translate(35, 502)">
+    <rect width="280" height="34" rx="6" fill="#061224" stroke="#00f3ff" stroke-width="1" stroke-opacity="0.5"/>
+    <circle cx="16" cy="17" r="4" fill="#00ff9d" filter="url(#stats-emerald-glow)"/>
+    <text class="txt-mono" font-size="10" font-weight="700" fill="#00ff9d" x="28" y="21">STATUS: OPEN FOR NEW OPPORTUNITIES</text>
   </g>
 
   <!-- Vertical Divider Line -->
-  <line x1="330" y1="70" x2="330" y2="350" stroke="url(#glass-edge)" stroke-width="1.5"/>
+  <line x1="350" y1="75" x2="350" y2="540" stroke="url(#stats-glass-edge)" stroke-width="1.5"/>
 
-  <!-- ================= RIGHT SIDE: DYNAMIC RADAR HUD & DEV RANK ================= -->
-  <g transform="translate(450, 205)">
-    <!-- Radar Background Rings -->
-    <circle r="60" fill="none" stroke="#1e293b" stroke-width="2"/>
-    <circle r="46" fill="none" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="4,4"/>
-    <circle r="30" fill="none" stroke="#0f172a" stroke-width="1"/>
+  <!-- ================= RIGHT COLUMN: DYNAMIC RADAR HUD & DEV RANK ================= -->
+  <g transform="translate(480, 270)">
+    <!-- Outer Calibrated Degrees Ring -->
+    <circle r="86" fill="none" stroke="#1e293b" stroke-width="2"/>
+    <circle r="86" fill="none" stroke="#00f3ff" stroke-width="2" stroke-dasharray="6,26" opacity="0.6"/>
 
-    <!-- Crosshairs -->
-    <line x1="-66" y1="0" x2="66" y2="0" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,3"/>
-    <line x1="0" y1="-66" x2="0" y2="66" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,3"/>
+    <!-- Degree Notation Labels -->
+    <g class="txt-mono" font-size="7.5" fill="#475569" font-weight="700" text-anchor="middle">
+      <text y="-91">000°</text>
+      <text x="96" y="3">090°</text>
+      <text y="97">180°</text>
+      <text x="-96" y="3">270°</text>
+    </g>
 
-    <!-- Rotating Radar Sweep Line -->
-    <line class="radar-line" x1="0" y1="0" x2="48" y2="0" stroke="#00f3ff" stroke-width="2" opacity="0.6"/>
+    <!-- Radar Range Circles -->
+    <circle r="68" fill="none" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <circle r="48" fill="none" stroke="#0f172a" stroke-width="1"/>
+    <circle r="26" fill="none" stroke="#1e293b" stroke-width="1"/>
 
-    <!-- Animated Foreground Ring Progress Tracker -->
-    <circle class="rank-ring" r="48" fill="none" stroke="url(#neon-cyan-green)" stroke-width="9" stroke-linecap="round" transform="rotate(-90)" filter="url(#subtle-glow)"/>
+    <!-- Crosshair Reticles -->
+    <line x1="-92" y1="0" x2="92" y2="0" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,3"/>
+    <line x1="0" y1="-92" x2="0" y2="92" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,3"/>
 
-    <!-- Central Grade Label Core -->
-    <text class="txt-sans" font-size="36" font-weight="900" fill="#ffffff" x="0" y="12" text-anchor="middle" letter-spacing="0.5">S+</text>
+    <!-- Radar Target Blips -->
+    <circle class="radar-blip-1" cx="34" cy="-42" r="3.5" fill="#00ff9d" filter="url(#stats-emerald-glow)"/>
+    <circle class="radar-blip-2" cx="-45" cy="28" r="3" fill="#00f3ff" filter="url(#stats-subtle-glow)"/>
 
-    <!-- Overall Rank Text Identifier Underneath -->
-    <text class="txt-mono" font-size="11" font-weight="800" fill="#00ff9d" x="0" y="80" text-anchor="middle" letter-spacing="2">STAFF_ARCHITECT</text>
-    <text class="txt-mono" font-size="9" font-weight="600" fill="#64748b" x="0" y="96" text-anchor="middle" letter-spacing="1">RANK: S+ // TOP 0.1%</text>
+    <!-- Continuous Rotating Radar Sweep Beam -->
+    <g class="radar-sweep-beam">
+      <path d="M 0,0 L 84,-15 A 85 85 0 0 1 85,0 Z" fill="url(#radar-sweep-grad)"/>
+      <line x1="0" y1="0" x2="85" y2="0" stroke="#00f3ff" stroke-width="2" opacity="0.8"/>
+    </g>
+
+    <!-- Central S+ Rank Core -->
+    <circle r="42" fill="#030712" stroke="#1e293b" stroke-width="2"/>
+    <circle r="42" fill="none" stroke="url(#progress-grad-1)" stroke-width="4.5" stroke-dasharray="220,35" filter="url(#stats-subtle-glow)"/>
+    <text class="txt-sans" font-size="34" font-weight="900" fill="#ffffff" x="0" y="12" text-anchor="middle" letter-spacing="0.5">S+</text>
+
+    <!-- Rank Title Badge Underneath -->
+    <g transform="translate(0, 114)">
+      <rect x="-75" y="-12" width="150" height="24" rx="5" fill="#022c22" stroke="#00ff9d" stroke-width="1.2"/>
+      <text class="txt-mono" font-size="10.5" font-weight="800" fill="#00ff9d" x="0" y="4" text-anchor="middle" letter-spacing="1.5">STAFF ARCHITECT</text>
+      
+      <text class="txt-mono" font-size="9.5" font-weight="700" fill="#94a3b8" x="0" y="24" text-anchor="middle" letter-spacing="1">RANK: S+ // TOP 0.1%</text>
+      <text class="txt-mono" font-size="8.5" font-weight="600" fill="#475569" x="0" y="38" text-anchor="middle" letter-spacing="1.5">VERIFIED TALENT // 2026</text>
+    </g>
   </g>
 
   <!-- ================= BOTTOM TELEMETRY FOOTER ================= -->
-  <g transform="translate(35, 388)" class="txt-mono" font-size="9.5" font-weight="700">
+  <line x1="35" y1="560" x2="585" y2="560" stroke="url(#stats-glass-edge)" stroke-width="1.2" opacity="0.6"/>
+
+  <g transform="translate(35, 592)" class="txt-mono" font-size="9" font-weight="700">
     <text fill="#64748b">CORE: <tspan fill="#00f3ff">NODE.JS / V8</tspan></text>
-    <text x="140" fill="#64748b">GRAPHICS: <tspan fill="#00ff9d">THREE.JS / WEBGL</tspan></text>
-    <text x="310" fill="#64748b">STATE: <tspan fill="#f8fafc">DISTRIBUTED</tspan></text>
+    <text x="140" fill="#64748b">INFRA: <tspan fill="#00ff9d">DOCKER / VPS</tspan></text>
+    <text x="300" fill="#64748b">STATE: <tspan fill="#f8fafc">DISTRIBUTED</tspan></text>
     <text x="440" fill="#64748b">SECURITY: <tspan fill="#00ff9d">HARDENED</tspan></text>
   </g>
 </svg>
